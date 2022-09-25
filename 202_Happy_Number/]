@@ -1,0 +1,16 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        numbers_already_seen = set()
+        while (n != 1):
+            if (n in numbers_already_seen):
+                return False
+
+            n = self._nextNumber(n)
+
+            numbers_already_seen.add(n)
+
+        return True
+
+    def _nextNumber(n: int) -> int:
+
+
